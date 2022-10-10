@@ -56,7 +56,7 @@ namespace SportsWorld.Pages_TeamPages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TeamExists(Team.TeamName))
+                if (!TeamExists(Team.TeamName!))
                 {
                     return NotFound();
                 }

@@ -19,7 +19,7 @@ public class ApplicationDbContext : IdentityDbContext
         builder.Entity<Team>().Property(p => p.TeamName).HasMaxLength(30);
         builder.Entity<Team>().ToTable("Team");
         builder.Entity<Player>().ToTable("Player");
-        builder.Seed();
+        builder.SeedTeamPlayer();
     }
 
     public DbSet<Team>? Teams { get; set; }

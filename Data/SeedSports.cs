@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SportsWorld.Models;
 
 namespace SportsWorld.Data;
-public static class SeedData
+public static class SeedSports
 {
 
     // this is an extension method to the ModelBuilder class
 
-    public static void Seed(this ModelBuilder modelBuilder)
+    public static void SeedTeamPlayer(this ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Team>().HasData(GetTeams());
         modelBuilder.Entity<Player>().HasData(GetPlayers());
